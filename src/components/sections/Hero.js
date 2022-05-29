@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
-
+import useSigner from "../../hooks/useSigner";
+import useConnectWallet from '../../hooks/useConnectWallet';
+import { ethers } from 'ethers';
+import useChainCurrency from "../../hooks/useChainCurrency";
 
 const propTypes = {
   ...SectionProps.types
@@ -23,8 +26,27 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-
-
+  const signer = useSigner();
+  const [connectWallet] = useConnectWallet();
+  const [connectedAccount, setConnectedAccount] = useState(null);
+  const currency = useChainCurrency(connectedAccount? connectedAccount.chainId: null);
+  useEffect(() => {
+    (async function (){
+      if(signer) {
+        const account = await signer.getAddress();
+        const balance = ethers.utils.formatEther((await signer.getBalance()).toString());
+        const chainId = signer.provider._network.chainId;
+        setConnectedAccount({
+          account : account,
+          balance : balance,
+          chainId : chainId,
+        });
+      } else {
+        setConnectedAccount(null);
+      }
+    })();
+  }, [signer]);
+  
   const outerClasses = classNames(
     'hero section center-content',
     topOuterDivider && 'has-top-divider',
@@ -60,9 +82,22 @@ const Hero = ({
                   <Button tag="a" color="primary" wideMobile href="https://cryptoswap69.netlify.app/">
                     Login with Binance
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://cryptoswap69.netlify.app/">
-                    Connect Wallet
-                    </Button>
+                  
+                  {signer && connectedAccount
+                  ? 
+                    (
+                      <Button color="dark" wideMobile onClick={connectWallet} className="accountDetails">
+                        <span>{`Connected : ${connectedAccount.account}`}</span>
+                        <span>{`Balance : ${connectedAccount.balance} ${currency}`}</span>
+                      </Button>
+                    )
+                  : 
+                    (
+                      <Button color="dark" wideMobile onClick={connectWallet}>
+                        Connect Wallet
+                      </Button>
+                    )
+                  }
                 </ButtonGroup>
               </div>
             </div>

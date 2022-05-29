@@ -25,6 +25,12 @@
 	}
 }
 
+.accountDetails {
+	white-space: break-spaces;
+	flex-direction: column;
+	padding: 40px 30px;
+}
+
 @include media( '<=medium' ) {
 
 	.hero {
