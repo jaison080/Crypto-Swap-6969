@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
+import { connectWallet } from '../../utils/ConnectWallet';
 
 const propTypes = {
   ...SectionProps.types
@@ -23,8 +26,21 @@ const Hero = ({
   invertColor,
   ...props
 }) => {
-
-
+  const [connectedAccount, setConnectedAccount] = useState(null);
+  const [signer, setSigner] = useState(null);
+  // const { state, dispatch } = useContext(AppContext);
+  async function onConnectWalletClick() {
+    const signer = await connectWallet();
+    if(signer) {
+      setSigner(signer);
+      console.log(signer);
+      const account = await signer.getAddress();
+      setConnectedAccount(account);
+    } else {
+      setSigner(null);
+      setConnectedAccount(null);
+    }
+  }
   const outerClasses = classNames(
     'hero section center-content',
     topOuterDivider && 'has-top-divider',
@@ -60,9 +76,24 @@ const Hero = ({
                   <Button tag="a" color="primary" wideMobile href="https://cryptoswap69.netlify.app/">
                     Login with Binance
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://cryptoswap69.netlify.app/">
+                  {/* <Button tag="a" color="dark" wideMobile href="https://cryptoswap69.netlify.app/">
                     Connect Wallet
-                    </Button>
+                    </Button> */}
+                  
+                  {signer && connectedAccount
+                  ? 
+                    (
+                      <Button color="dark" wideMobile onClick={onConnectWalletClick}>
+                      {`Connected to: ${connectedAccount}`}
+                      </Button>
+                    )
+                  : 
+                    (
+                      <Button color="dark" wideMobile onClick={onConnectWalletClick}>
+                        Connect Wallet
+                      </Button>
+                    )
+                  }
                 </ButtonGroup>
               </div>
             </div>
