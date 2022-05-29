@@ -1,4 +1,4 @@
-# Crypto Swap - Intergalactica - Execute 2.0
+# Crypto Swap - GALACTICA - Hackistica'22
 
 ![Logo](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/logo.png)
 
@@ -8,7 +8,7 @@ Link : http://cryptoswap6969.netlify.app/
 
 ## Team Details
 
-Team Name : <b>INTERGALACTIC</b>
+Team Name : <b>GALACTICA</b>
 
 ## Project Description
 
@@ -20,7 +20,6 @@ Crypto Swap helps you invest in Crypto Baskets curated by Crypto Experts...
 2. [Jaison Dennis](https://github.com/jaison080)
 3. [Mayon Francis](https://github.com/Mayon-Francis)
 4. [Jagannath E Shahi](https://github.com/Jagannathes)
-5. [Vishnu R Potti](https://github.com/Vishnurr2k01)
 
 ## 🔧 Project UI:
 
@@ -55,4 +54,4 @@ npm start
 
 ## Technologies Used:
 
-React.js for Frontend , Binance , Metamask
+React.js for Frontend , Binance , Metamask , Uniswap , Express , Binance
