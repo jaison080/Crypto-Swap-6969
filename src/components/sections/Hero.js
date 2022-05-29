@@ -5,6 +5,8 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import useSigner from "../../hooks/useSigner";
 import useConnectWallet from '../../hooks/useConnectWallet';
+import { ethers } from 'ethers';
+import useChainCurrency from "../../hooks/useChainCurrency";
 
 const propTypes = {
   ...SectionProps.types
@@ -26,13 +28,21 @@ const Hero = ({
 }) => {
   const signer = useSigner();
   const [connectWallet] = useConnectWallet();
-
   const [connectedAccount, setConnectedAccount] = useState(null);
+  const currency = useChainCurrency(connectedAccount? connectedAccount.chainId: null);
   useEffect(() => {
     (async function (){
       if(signer) {
         const account = await signer.getAddress();
-        setConnectedAccount(account);
+        const balance = ethers.utils.formatEther((await signer.getBalance()).toString());
+        const chainId = signer.provider._network.chainId;
+        setConnectedAccount({
+          account : account,
+          balance : balance,
+          chainId : chainId,
+        });
+      } else {
+        setConnectedAccount(null);
       }
     })();
   }, [signer]);
@@ -76,8 +86,9 @@ const Hero = ({
                   {signer && connectedAccount
                   ? 
                     (
-                      <Button color="dark" wideMobile onClick={connectWallet}>
-                      {`Connected to: ${connectedAccount}`}
+                      <Button color="dark" wideMobile onClick={connectWallet} className="accountDetails">
+                        <span>{`Connected : ${connectedAccount.account}`}</span>
+                        <span>{`Balance : ${connectedAccount.balance} ${currency}`}</span>
                       </Button>
                     )
                   : 
