@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'How to invest',
-    paragraph: 'find out how to invest in the right way'
+    title: 'How To Invest',
+    paragraph: 'Find out how to invest in the right way.'
   };
 
   return (
@@ -70,10 +70,10 @@ const FeaturesSplit = ({
                   Exchanges
                   </div>
                 <h3 className="mt-0 mb-12">
-                 Connect with any exchange
+                 Connect with any exchange.
                   </h3>
                 <p className="m-0">
-                  Autheniticate with the exchange
+                  Autheniticate with the exchange.
                   </p>
               </div>
               <div className={
@@ -96,10 +96,10 @@ const FeaturesSplit = ({
             Explore
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Choose the basket
+                  Choose the Basket.
                   </h3>
                 <p className="m-0">
-                 explore and choose the basket to invest in
+                 Explore and choose the basket to invest in.
                   </p>
               </div>
               <div className={
@@ -122,11 +122,11 @@ const FeaturesSplit = ({
                  Invest
                   </div>
                 <h3 className="mt-0 mb-12">
-                  You are done
+                  You are done.
                   </h3>
                 <p className="m-0">
                   Enter the amount you want to invest.
-                  click invest or sell
+                  Click Invest or Sell.
                   </p>
               </div>
               <div className={

@@ -44,8 +44,8 @@ const Testimonial = ({
   );
 
   const sectionHeader = {
-    title: 'customer testimonials',
-    paragraph: 'What our customers are saying'
+    title: 'Customer Testimonials',
+    paragraph: 'What our customers are saying.'
   };
 
   return (
@@ -62,14 +62,14 @@ const Testimonial = ({
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                   Great product
+                   Great product.
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">adam oomen</span>
+                  <span className="testimonial-item-name text-color-high">Adam Oomen</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">crypto influencer</a>
+                    <a href="#0">Crypto Influencer</a>
                   </span>
                 </div>
               </div>
@@ -79,14 +79,14 @@ const Testimonial = ({
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                    Love the user experience
+                    Love the user experience.
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Mayon</span>
+                  <span className="testimonial-item-name text-color-high">Mayon Francis</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">NFT collector</a>
+                    <a href="#0">NFT Collector</a>
                   </span>
                 </div>
               </div>
@@ -96,14 +96,14 @@ const Testimonial = ({
               <div className="tiles-item-inner">
                 <div className="testimonial-item-content">
                   <p className="text-sm mb-0">
-                   Easy to invest
+                   Easy to invest.
                       </p>
                 </div>
                 <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-name text-color-high">Altcoin gordan</span>
+                  <span className="testimonial-item-name text-color-high">Altcoin Gordan</span>
                   <span className="text-color-low"> / </span>
                   <span className="testimonial-item-link">
-                    <a href="#0">crypto influencer</a>
+                    <a href="#0">Crypto Influencer</a>
                   </span>
                 </div>
               </div>

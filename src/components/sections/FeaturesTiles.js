@@ -71,10 +71,10 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                   Portfolio by crypto experts
+                   Portfolio by Crypto Experts
                     </h4>
                   <p className="m-0 text-sm">
-                  Invest in crypto assets curated by crypto experts
+                  Invest in Crypto Assets curated by Crypto Experts
                     </p>
                 </div>
               </div>
@@ -93,7 +93,7 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    portfolio for any risk level
+                    Portfolio for any risk level
                     </h4>
                   <p className="m-0 text-sm">
                    We have different portfolio for different risk level
@@ -137,7 +137,7 @@ const FeaturesTiles = ({
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    Easy ux
+                    Easy UX
                     </h4>
                   <p className="m-0 text-sm">
 Bye bye to complex exchange UI
