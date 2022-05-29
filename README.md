@@ -36,11 +36,19 @@ Crypto Swap helps you invest in Crypto Baskets curated by Crypto Experts...
 <br>
 ![Project Dashboard-3](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img5.png)
 
-# Steps To Run the Project:
+# Steps To Run the Home Page of Project:
 
 ```bash
 git clone https://github.com/jaison080/Crypto-Swap-6969
 cd Crypto-Swap-6969
+npm install
+npm start
+```
+# Steps To Run the Dashboard Page of Project:
+
+```bash
+git clone https://github.com/salmanpary/crypto-swap
+cd crypto-swap
 npm install
 npm start
 ```
