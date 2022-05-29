@@ -1,5 +1,7 @@
 # Crypto Swap - Intergalactica - Execute 2.0
 
+![Logo](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/logo.png)
+
 ## Live Demo
 
 Link : http://cryptoswap6969.netlify.app/
@@ -23,10 +25,15 @@ Crypto Swap helps you invest in Crypto Baskets curated by Crypto Experts...
 ## 🔧 Project UI:
 
 ![Project Home-1](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img.png)
+<br>
 ![Project Home-2](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img1.png)
+<br>
 ![Project Home-3](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img2.png)
+<br>
 ![Project Dashboard-1](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img3.png)
+<br>
 ![Project Dashboard-2](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img4.png)
+<br>
 ![Project Dashboard-3](https://github.com/jaison080/Crypto-Swap-6969/blob/master/images/img5.png)
 
 # Steps To Run the Project:
